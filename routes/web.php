@@ -23,10 +23,7 @@ Route::controller(NewsController::class)->prefix("admin")->name("news.")->group(
     Route::get("news/create", "add")->name("add");
 });
 
-Route::controller(SelfProfileController::class)->prefix("admin")->name("create.")->group(function(){
+Route::controller(SelfProfileController::class)->prefix("admin")->name("profile.")->group(function(){
     Route::get("profile/create", "add")->name("add");
-});
-
-Route::controller(SelfProfileController::class)->prefix("admin")->name("edit.")->group(function(){
     Route::get("profile/edit", "edit")->name("edit");
 });
